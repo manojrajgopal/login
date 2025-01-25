@@ -1,0 +1,114 @@
+/* General container styling */
+.mobile-navigation-menu-ai-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 20px auto; /* Center horizontally */
+    position: fixed;
+    bottom: 20px; /* Sticks to the bottom */
+    left: 50%; /* Center container horizontally */
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+/* Input field styling */
+#mobile-navigation-outfit-input {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: #333;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+/* Input field hover and focus effects */
+#mobile-navigation-outfit-input:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: #007bff;
+}
+
+/* Buttons styling */
+.mobile-navigation-menu-ai-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Mic button hover effect */
+#mobile-navigation-mic-button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+/* Paper plane button hover effect */
+#mobile-navigation-paper-plane-button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+/* Disabled button state */
+.mobile-navigation-menu-ai-button:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Ionicon size and alignment */
+.mobile-navigation-menu-ai-button ion-icon {
+    font-size: 24px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .mobile-navigation-menu-ai-input {
+        max-width: 100%;
+        padding: 10px;
+        bottom: 10px;
+    }
+
+    #mobile-navigation-outfit-input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .mobile-navigation-menu-ai-button {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+/* Wave animation */
+@keyframes waveAnimation {
+    0% {
+        background-color: #f9f9f9;
+    }
+    50% {
+        background-color: #e0e0e0; /* Light grey to simulate typing/processing */
+    }
+    100% {
+        background-color: #f9f9f9;
+    }
+}
+
+/* Apply the wave animation to the input field */
+#mobile-navigation-outfit-input.waving {
+    animation: waveAnimation 1s infinite;
+}
